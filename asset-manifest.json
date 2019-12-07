@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/orders_products/static/css/main.3da0fa7d.chunk.css",
+    "main.js": "/orders_products/static/js/main.98e2be62.chunk.js",
+    "main.js.map": "/orders_products/static/js/main.98e2be62.chunk.js.map",
+    "runtime-main.js": "/orders_products/static/js/runtime-main.4634f106.js",
+    "runtime-main.js.map": "/orders_products/static/js/runtime-main.4634f106.js.map",
+    "static/js/2.e61d6338.chunk.js": "/orders_products/static/js/2.e61d6338.chunk.js",
+    "static/js/2.e61d6338.chunk.js.map": "/orders_products/static/js/2.e61d6338.chunk.js.map",
+    "index.html": "/orders_products/index.html",
+    "precache-manifest.0ac72b2155cbd2f77a7ac3d7c3c22d35.js": "/orders_products/precache-manifest.0ac72b2155cbd2f77a7ac3d7c3c22d35.js",
+    "service-worker.js": "/orders_products/service-worker.js",
+    "static/css/main.3da0fa7d.chunk.css.map": "/orders_products/static/css/main.3da0fa7d.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4634f106.js",
+    "static/js/2.e61d6338.chunk.js",
+    "static/css/main.3da0fa7d.chunk.css",
+    "static/js/main.98e2be62.chunk.js"
+  ]
+}
