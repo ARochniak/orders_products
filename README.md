@@ -1,4 +1,13 @@
+This app helps to manage orders
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## In the project directory via cmd run
+
+### 'npm i'
+To install all dependencies
+
+### 'node server.js'
+To make socket.io work
 
 ## Available Scripts
 

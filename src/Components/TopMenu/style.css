@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1vw 7vw;
+  box-shadow: 5px 0px 30px 0px #d3d8db;
+  font: 600 0.9em serif;
+  color: #2c3c44;
+}
+.header > div {
+  margin-left: 5vw;
+}
