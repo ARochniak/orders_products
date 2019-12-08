@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const DateDisplay = () => {
   const getDateArray = () => {
-    return new Date().toLocaleString("ru", {
+    return new Date().toLocaleString('en', {
       year: 'numeric',
       month: 'long',
       day: '2-digit',
@@ -22,8 +22,8 @@ const DateDisplay = () => {
       }, getMSToTomorrow())
   })  
   const wd = date[0].slice(0, -1),
-    md = date[1],
-    m = date[2],
+    md = date[2].slice(0, -1),
+    m = date[1],
     y = date[3];
   
   return (

@@ -16,17 +16,17 @@ const Popup = (props) => {
   return (
     <div className='popup'>
       <div className='popup_alert'>
-        <h4>Вы уверенны что хотите удалить приход?</h4>
+        <h4>Are you sure you want to remove this order?</h4>
         <div className='order_title'>{title}</div>
         <div className='alert_btns'>
-          <button onClick={onClose}>ОТМЕНИТЬ</button>
+          <button onClick={onClose}>CANCEL</button>
           <button onClick={onRemove}>
             <img src={trash} 
               alt='trash' 
               width='15' 
               height='15'
               style={{marginRight: '10px'}}/>
-            УДАЛИТЬ
+            REMOVE
           </button>
         </div>
       </div>

@@ -26,7 +26,9 @@ export default connect()( (props) => {
 
       { active ? null: <div>{order.title}</div> }
 
-      <div>{order.products.length} <br/>Продукта</div>
+      <div>{order.products.length}  <br/>
+        {order.products.length > 1 ? 'Products' : 'Product'}
+      </div>
       <div>{getDate(order.date, 'numeric')} 
         <br/> {getDate(order.date)}
       </div>

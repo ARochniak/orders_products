@@ -35,11 +35,10 @@ const Products = props => {
 			<div className='products_header'>
 				<h2>Products / {props.productList.length}</h2>
 				<div>
-					<span>Отсортировать по: </span>
+					<span>Sort by: </span>
 					<select onChange={changeHandler}>
-					  <option value="" defaultValue>По умолчанию</option>
-					  <option value="date">По дате</option>
-					  <option value="type">По типу</option>
+					  <option value="" defaultValue>Default</option>
+					  <option value="type">By type</option>
 					</select>
 				</div>
 			</div>

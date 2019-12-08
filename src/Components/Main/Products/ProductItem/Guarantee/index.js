@@ -6,8 +6,8 @@ const Garantee = (props) => {
   return (
     <div>
       <div>
-        <span className='small'>С </span><br/>
-        <span className='small'>По </span>
+        <span className='small'>from </span><br/>
+        <span className='small'>to </span>
       </div>
       <div style={{marginLeft: '5px'}}>
         {getDate(from, 'longNumeric')} <br/>

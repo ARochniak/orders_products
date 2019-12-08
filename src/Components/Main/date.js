@@ -1,5 +1,5 @@
-const months = ['Янв', 'Февр', 'Мар', 'Апр', 'Май', 'Июн',
-  'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const getDate = (dateStr, type) => {
   const date = new Date(dateStr);

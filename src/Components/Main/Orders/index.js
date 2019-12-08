@@ -50,7 +50,7 @@ const Orders = props => {
 						order => order.id === removingOrder).title}
 				/>
 			</CSSTransition>
-	    <h1>Приходы / {props.ordersList.length}</h1>
+	    <h1>Orders / {props.ordersList.length}</h1>
 			<div className='ordersPanel'>
 				<ul className='orders'>
 					{renderOrders(props.ordersList)}
