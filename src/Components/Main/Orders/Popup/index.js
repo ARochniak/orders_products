@@ -1,4 +1,5 @@
 import React from 'react';
+import { createPortal } from 'react-dom';
 import { connect } from 'react-redux';
 import { REMOVE_ORDER } from 'types';
 import trash from './trash_red.png';
@@ -13,11 +14,11 @@ const Popup = (props) => {
   const onClose = () => {
     props.close();
   }
-  return (
+  const content = (
     <div className='popup'>
       <div className='popup_alert'>
         <h4>Are you sure you want to remove this order?</h4>
-        <div className='order_title'>{title}</div>
+        <div className='order_title'>{title || 'Order removing'}</div>
         <div className='alert_btns'>
           <button onClick={onClose}>CANCEL</button>
           <button onClick={onRemove}>
@@ -31,7 +32,9 @@ const Popup = (props) => {
         </div>
       </div>
     </div>
-  )
+  );
+
+  return createPortal(content, document.querySelector('main'));
 }
 
 export default connect()(Popup);

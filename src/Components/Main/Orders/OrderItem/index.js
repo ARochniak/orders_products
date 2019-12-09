@@ -40,7 +40,7 @@ export default connect()( (props) => {
             alt='trash' 
             className='trash'
             onClick={() => {
-              setRemovingOrder(order.id);
+              setRemovingOrder({id: order.id, title: order.title});
               setAlert(true);
             }}/>
         </>

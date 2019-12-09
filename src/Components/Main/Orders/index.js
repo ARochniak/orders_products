@@ -37,19 +37,18 @@ const Orders = props => {
 
 	return (
 		<>
-			<CSSTransition
+			{removingOrder && (<CSSTransition
         in={alert}
         timeout={300}
         classNames="alert"
         unmountOnExit
       >
 				<Popup 
-					order={removingOrder}
-					close={() => {setAlert(false); setRemovingOrder(null)} }
-					title={removingOrder && props.ordersList.find( 
-						order => order.id === removingOrder).title}
+					order={removingOrder.id}
+					close={() => setAlert(false)}
+					title={removingOrder.title}
 				/>
-			</CSSTransition>
+			</CSSTransition>)}
 	    <h1>Orders / {props.ordersList.length}</h1>
 			<div className='ordersPanel'>
 				<ul className='orders'>
