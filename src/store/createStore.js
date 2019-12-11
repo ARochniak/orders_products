@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 import reducer from './reducers';
-import store from './store';
+import initialStore from './initialStore';
 
 export default function() {
-  return createStore(reducer, store);
+  return createStore(reducer, initialStore);
 }

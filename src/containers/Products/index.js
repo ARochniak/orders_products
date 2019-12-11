@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import ProductItem from 'components/ProductItem';
+import ProductList from 'components/ProductList';
 import './style.css';
 
 const Products = props => {
@@ -8,26 +8,6 @@ const Products = props => {
 
   const changeHandler = e => {
     setOption(e.currentTarget.value);
-  };
-
-  const renderProducts = list => {
-    let productList = [...list];
-    if (optionSelected) {
-      productList.sort((a, b) => {
-        let res;
-        if (a[optionSelected] > b[optionSelected]) {
-          res = 1;
-        } else if (a[optionSelected] < b[optionSelected]) {
-          res = -1;
-        } else res = 0;
-        return res;
-      });
-    }
-
-    productList = productList.map((product, i) => {
-      return <ProductItem product={product} key={i} />;
-    });
-    return productList;
   };
 
   return (
@@ -44,7 +24,9 @@ const Products = props => {
           </select>
         </div>
       </div>
-      <ul className="products">{renderProducts(props.productList)}</ul>
+      <ul className="products">
+        <ProductList list={props.productList} option={optionSelected} />
+      </ul>
     </>
   );
 };

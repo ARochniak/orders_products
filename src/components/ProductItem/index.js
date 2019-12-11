@@ -1,5 +1,6 @@
 import React from 'react';
 import getDate from 'utils/date';
+import './index.css';
 
 const Guarantee = props => {
   const { from, to } = props;

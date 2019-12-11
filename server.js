@@ -4,15 +4,15 @@ var io = require('socket.io')(http);
 
 var connectCounter = 0;
 
-io.on('connection', function(socket){
+io.on('connection', function(socket) {
   connectCounter++;
   io.emit('session count', connectCounter);
-  socket.on('disconnect', function(){
+  socket.on('disconnect', function() {
     connectCounter--;
     io.emit('session count', connectCounter);
   });
 });
 
-http.listen(8000, function(){
+http.listen(8000, function() {
   console.log('listening on *:8000');
 });
