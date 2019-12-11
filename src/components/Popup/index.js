@@ -16,7 +16,7 @@ const Popup = props => {
     <div className="popup">
       <div className="popup_alert">
         <h4>Are you sure you want to remove this order?</h4>
-        <div className="order_title">{title || 'Order removing'}</div>
+        <div className="orderTitle">{title}</div>
         <div className="alert_btns">
           <button onClick={onClose}>
             <span className="btn__content" tabIndex="-1">

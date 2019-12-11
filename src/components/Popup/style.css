@@ -16,7 +16,7 @@
 .popup_alert h4 {
   margin-left: 30px;
 }
-.order_title {
+.orderTitle {
   text-align: center;
   padding: 10px;
 }
@@ -47,6 +47,6 @@
   margin-right: 10px;
 }
 .btn__content,
-.alert_brns > button {
+.alert_btns > button {
   outline: none;
 }
