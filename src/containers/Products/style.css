@@ -1,0 +1,30 @@
+.products_header {
+  display: flex;
+  align-items: baseline;
+}
+.products_header > h2 {
+  margin-right: 10px;
+}
+.products_header select {
+  cursor: pointer;
+}
+.products > li {
+  display: flex;
+  width: fit-content;
+  cursor: initial !important;
+  transition: all 0.5s ease-out;
+}
+.products > li > div:first-child,
+.products > li > div:last-child {
+  text-decoration: underline;
+  text-decoration-color: #d7d9da;
+}
+.products > li > div:nth-child(3) {
+  display: flex;
+}
+.products > li > div {
+  width: 15vw;
+}
+.products > li > div:last-child {
+  width: initial;
+}
