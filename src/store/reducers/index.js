@@ -15,20 +15,7 @@ export default (state, action) => {
       };
     }
     case types.REMOVE_ORDER: {
-      const products = [];
-      const orders = [];
-      state.ordersList.forEach(order => {
-        if (order.id !== action.order) orders.push(order);
-      });
-
-      state.productList.forEach(product => {
-        if (product.order !== action.order) products.push(product);
-      });
-      return {
-        productList: products,
-        activeOrder: null,
-        ordersList: orders
-      };
+      return action.state;
     }
 
     default:

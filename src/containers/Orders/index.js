@@ -4,11 +4,8 @@ import { CSSTransition } from 'react-transition-group';
 import OrderProducts from 'components/OrderProducts';
 import Popup from 'components/Popup';
 import OrderItem from 'components/OrderItem';
-import {
-  REMOVE_ORDER,
-  CLOSE_ACTIVE_ORDER,
-  SET_ACTIVE_ORDER
-} from 'redux_store/types';
+import removeOrder from 'store/thunk';
+import { CLOSE_ACTIVE_ORDER, SET_ACTIVE_ORDER } from 'store/types';
 import './style.css';
 
 const Orders = props => {
@@ -58,9 +55,7 @@ const Orders = props => {
           unmountOnExit
         >
           <Popup
-            remove={() =>
-              props.dispatch({ type: REMOVE_ORDER, order: removingOrder.id })
-            }
+            remove={() => props.dispatch(removeOrder(removingOrder.id))}
             close={() => setAlert(false)}
             title={removingOrder.title}
           />
