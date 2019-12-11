@@ -22,8 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "precommit": "lint-staged"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,6 +49,11 @@
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "eslint": "node_modules/.bin/eslint src/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js, jsx}": [
