@@ -2,15 +2,12 @@ import { REMOVE_ORDER } from 'store/types';
 
 const removeOrder = id => {
   return (dispatch, getState) => {
-    const products = [];
-    const orders = [];
-    getState().ordersList.forEach(order => {
-      if (order.id !== id) orders.push(order);
-    });
+    const products = [...getState().productList];
+    const orders = [...getState().ordersList];
 
-    getState().productList.forEach(product => {
-      if (product.order !== id) products.push(product);
-    });
+    orders = orders.filter(order => order.id !== id);
+    products = products.filter(product => product.order !== id);
+
     dispatch({
       type: REMOVE_ORDER,
       state: {
